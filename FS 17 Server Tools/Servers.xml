@@ -8,7 +8,6 @@
     <Username></Username>
     <Password></Password>
     <WebApiCode></WebApiCode>
-    <MiniMapFileName></MiniMapFileName>
     <MapFileName></MapFileName>
   </Server>
   <Server>
@@ -19,7 +18,6 @@
     <Username></Username>
     <Password></Password>
     <WebApiCode>727abb5e6636298712ede57477209220</WebApiCode>
-    <MiniMapFileName></MiniMapFileName>
     <MapFileName></MapFileName>
   </Server>
 </Servers>
