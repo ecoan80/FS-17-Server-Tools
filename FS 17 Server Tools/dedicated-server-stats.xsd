@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Server">
+    <xs:complexType>
+    	
+      <xs:sequence>
+        <xs:element name="Slots">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="16" minOccurs="1" name="Player">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="isUsed" type="xs:boolean" use="required"/>
+                      <xs:attribute name="isAdmin" type="xs:boolean"/>
+                      <xs:attribute name="uptime" type="xs:decimal"/>
+                      <xs:attribute name="x" type="xs:decimal"/>
+                      <xs:attribute name="y" type="xs:decimal"/>
+                      <xs:attribute name="z" type="xs:decimal"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="capacity" type="xs:integer"/>
+            <xs:attribute name="numUsed" type="xs:integer"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element maxOccurs="1" minOccurs="0" name="Vehicles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="Vehicle">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string"/>
+                  <xs:attribute name="category" type="xs:string"/>
+                  <xs:attribute name="type" type="xs:string"/>
+                  <xs:attribute name="x" type="xs:decimal"/>
+                  <xs:attribute name="y" type="xs:decimal"/>
+                  <xs:attribute name="z" type="xs:decimal"/>
+                  <xs:attribute name="fillLevels" type="xs:string"/>
+                  <xs:attribute name="fillTypes" type="xs:string"/>
+                  <xs:attribute name="controller" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element maxOccurs="1" minOccurs="0" name="Mods">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="Mod">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="name" type="xs:string" use="required"/>
+                      <xs:attribute name="author" type="xs:string"/>
+                      <xs:attribute name="hash" type="xs:string"/>
+                      <xs:attribute name="version" type="xs:string"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element maxOccurs="1" minOccurs="0" name="Fields">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="Field">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="name" type="xs:string"/>
+                      <xs:attribute name="number" type="xs:integer" use="required"/>
+                      <xs:attribute name="owned" type="xs:boolean"/>
+                      <xs:attribute name="area" type="xs:decimal"/>
+                      <xs:attribute name="price" type="xs:integer"/>
+                      <xs:attribute name="xPos" type="xs:decimal"/>
+                      <xs:attribute name="zPos" type="xs:decimal"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      
+      <xs:attribute name="game" type="xs:string"/>
+      <xs:attribute name="version" type="xs:string"/>
+      <xs:attribute name="server" type="xs:string"/>
+      <xs:attribute name="name" type="xs:string"/>
+      <xs:attribute name="mapName" type="xs:string"/>
+      <xs:attribute name="money" type="xs:integer"/>
+      <xs:attribute name="dayTime" type="xs:decimal"/>
+      <xs:attribute name="mapOverviewFilename" type="xs:string"/>
+      <xs:attribute name="mapSize" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

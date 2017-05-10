@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Servers>
+  <Server>
+    <Name>Example</Name>
+    <Protocol>http</Protocol>
+    <Hostname>127.0.0.1</Hostname>
+    <Port>8080</Port>
+    <Username></Username>
+    <Password></Password>
+    <WebApiCode></WebApiCode>
+    <MiniMapFileName></MiniMapFileName>
+    <MapFileName></MapFileName>
+  </Server>
+  <Server>
+    <Name>The Rabbit Hole</Name>
+    <Protocol>http</Protocol>
+    <Hostname>173.199.102.223</Hostname>
+    <Port>18001</Port>
+    <Username></Username>
+    <Password></Password>
+    <WebApiCode>727abb5e6636298712ede57477209220</WebApiCode>
+    <MiniMapFileName></MiniMapFileName>
+    <MapFileName></MapFileName>
+  </Server>
+</Servers>
